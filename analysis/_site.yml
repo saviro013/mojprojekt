@@ -1,14 +1,20 @@
-name: "mojprojekt"
+name: mojprojekt
 output_dir: ../docs
 navbar:
-  title: "mojprojekt"
+  title: mojprojekt
   left:
   - text: Home
     href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+  - text: CV
+    href: cv.html
+  - text: Analiza
+    href: analiza.html
+  - text: Prezentacja
+    href: prezentacja.html
+  right:
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/saviro013/mojprojekt
 output:
   workflowr::wflow_html:
     toc: yes
