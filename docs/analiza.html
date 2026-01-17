@@ -36,6 +36,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -343,7 +345,13 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/saviro013/mojprojekt">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -514,13 +522,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong57ee699">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsaviro013mojprojekttree68045648fbf20ad40037e04941daf90b897bb437targetblank6804564a">
 <span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Repository version:</strong> 57ee699
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/saviro013/mojprojekt/tree/68045648fbf20ad40037e04941daf90b897bb437" target="_blank">6804564</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong57ee699"
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomsaviro013mojprojekttree68045648fbf20ad40037e04941daf90b897bb437targetblank6804564a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -529,7 +539,8 @@ and connecting the code version to the results is critical for
 reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 57ee699.
+The results in this page were generated with repository version
+<a href="https://github.com/saviro013/mojprojekt/tree/68045648fbf20ad40037e04941daf90b897bb437" target="_blank">6804564</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -548,10 +559,9 @@ Ignored files:
     Ignored:    .Rproj.user/
 
 Untracked files:
+    Untracked:  prezentacja.html
     Untracked:  prezentacja.qmd
-
-Unstaged changes:
-    Modified:   analysis/_site.yml
+    Untracked:  prezentacja_files/
 
 </code></pre>
 <p>
@@ -601,7 +611,41 @@ Message
 Rmd
 </td>
 <td>
-57ee699
+<a href="https://github.com/saviro013/mojprojekt/blob/68045648fbf20ad40037e04941daf90b897bb437/analysis/analiza.Rmd" target="_blank">6804564</a>
+</td>
+<td>
+saviro013
+</td>
+<td>
+2026-01-17
+</td>
+<td>
+nieskonczone 1.0
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/saviro013/mojprojekt/a29b325f84a8b1c66189da3e0988785f9b820c19/docs/analiza.html" target="_blank">a29b325</a>
+</td>
+<td>
+saviro013
+</td>
+<td>
+2026-01-17
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/saviro013/mojprojekt/blob/57ee6995d6f62415216f841ba04560e1765618fa/analysis/analiza.Rmd" target="_blank">57ee699</a>
 </td>
 <td>
 saviro013
@@ -620,32 +664,82 @@ projekt
 </div>
 </div>
 </div>
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  </code></pre>
-</div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="figure/analiza.Rmd/pressure-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="zbiór-danych" class="section level2">
+<h2>zbiór danych</h2>
+<p>zbiorem danych jest palmerpenguins</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.6
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.1     ✔ tibble    3.3.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.2
+✔ purrr     1.2.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(palmerpenguins)</code></pre>
+<pre><code>
+Dołączanie pakietu: &#39;palmerpenguins&#39;
+
+Następujące obiekty zostały zakryte z &#39;package:datasets&#39;:
+
+    penguins, penguins_raw</code></pre>
+<pre class="r"><code>data(&quot;penguins&quot;)
+
+tabela_wynikowa &lt;- penguins %&gt;%
+  #usuwanie tych z brakami
+  filter(!is.na(sex), !is.na(body_mass_g)) %&gt;%
+  group_by(species, island) %&gt;%
+  summarise(
+    liczba_pingwinow = n(),
+    srednia_masa_g = mean(body_mass_g),
+    .groups = &#39;drop&#39;
+  ) %&gt;%
+  
+  mutate(srednia_masa_kg = srednia_masa_g / 1000)
+print(tabela_wynikowa)</code></pre>
+<pre><code># A tibble: 5 × 5
+  species   island    liczba_pingwinow srednia_masa_g srednia_masa_kg
+  &lt;fct&gt;     &lt;fct&gt;                &lt;int&gt;          &lt;dbl&gt;           &lt;dbl&gt;
+1 Adelie    Biscoe                  44          3710.            3.71
+2 Adelie    Dream                   55          3701.            3.70
+3 Adelie    Torgersen               47          3709.            3.71
+4 Chinstrap Dream                   68          3733.            3.73
+5 Gentoo    Biscoe                 119          5092.            5.09</code></pre>
+<pre class="r"><code>ggplot(penguins, aes(x = body_mass_g, fill = species)) +
+  geom_histogram(bins = 30, alpha = 0.7, color = &quot;black&quot;) +
+  labs(
+    title = &quot;rozkład masy ciała pingwinów&quot;,
+    x = &quot;masa ciała&quot;,
+    y = &quot;częstotliwość (liczba osobników)&quot;,
+    fill = &quot;gatunek&quot;
+  ) +
+  theme_minimal()</code></pre>
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+<p><img src="figure/analiza.Rmd/unnamed-chunk-1-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>ggplot(tabela_wynikowa, aes(x = species, y = srednia_masa_kg, fill = island)) +
+  geom_col(position = &quot;dodge&quot;) +
+  labs(
+    title = &quot;średnia masa ciała w zależności od gatunku i wyspy&quot;,
+    x = &quot;gatunek pingwina&quot;,
+    y = &quot;średnia masa&quot;,
+    fill = &quot;wyspa&quot;
+  ) +
+  theme_bw()</code></pre>
+<p><img src="figure/analiza.Rmd/unnamed-chunk-1-2.png" alt="" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>ggplot(penguins, aes(x = species, y = bill_length_mm, fill = species)) +
+  geom_boxplot() +
+  labs(
+    title = &quot;zróżnicowanie długości dzioba między gatunkami&quot;,
+    x = &quot;gatunek&quot;,
+    y = &quot;gługość dzioba&quot;
+  ) +
+  theme_light()</code></pre>
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
+<p><img src="figure/analiza.Rmd/unnamed-chunk-1-3.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -674,19 +768,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.7.2
+ [1] palmerpenguins_0.1.1 lubridate_1.9.4      forcats_1.0.1       
+ [4] stringr_1.6.0        dplyr_1.1.4          purrr_1.2.1         
+ [7] readr_2.1.6          tidyr_1.3.2          tibble_3.3.1        
+[10] ggplot2_4.0.1        tidyverse_2.0.0      workflowr_1.7.2     
 
 loaded via a namespace (and not attached):
- [1] vctrs_0.7.0       httr_1.4.7        cli_3.6.5         knitr_1.51       
- [5] rlang_1.1.7       xfun_0.55         stringi_1.8.7     otel_0.2.0       
- [9] processx_3.8.6    promises_1.5.0    jsonlite_2.0.0    glue_1.8.0       
-[13] rprojroot_2.1.1   git2r_0.36.2      htmltools_0.5.9   httpuv_1.6.16    
-[17] ps_1.9.1          sass_0.4.10       rmarkdown_2.30    jquerylib_0.1.4  
-[21] evaluate_1.0.5    fastmap_1.2.0     yaml_2.3.12       lifecycle_1.0.5  
-[25] whisker_0.4.1     stringr_1.6.0     compiler_4.5.2    fs_1.6.6         
-[29] Rcpp_1.1.1        rstudioapi_0.18.0 later_1.4.5       digest_0.6.39    
-[33] R6_2.6.1          callr_3.7.6       magrittr_2.0.4    bslib_0.9.0      
-[37] tools_4.5.2       cachem_1.1.0      getPass_0.2-4    </code></pre>
+ [1] utf8_1.2.6         sass_0.4.10        generics_0.1.4     stringi_1.8.7     
+ [5] hms_1.1.4          digest_0.6.39      magrittr_2.0.4     timechange_0.3.0  
+ [9] evaluate_1.0.5     grid_4.5.2         RColorBrewer_1.1-3 fastmap_1.2.0     
+[13] rprojroot_2.1.1    jsonlite_2.0.0     processx_3.8.6     whisker_0.4.1     
+[17] ps_1.9.1           promises_1.5.0     httr_1.4.7         scales_1.4.0      
+[21] jquerylib_0.1.4    cli_3.6.5          rlang_1.1.7        withr_3.0.2       
+[25] cachem_1.1.0       yaml_2.3.12        otel_0.2.0         tools_4.5.2       
+[29] tzdb_0.5.0         httpuv_1.6.16      vctrs_0.7.0        R6_2.6.1          
+[33] lifecycle_1.0.5    git2r_0.36.2       fs_1.6.6           pkgconfig_2.0.3   
+[37] callr_3.7.6        pillar_1.11.1      bslib_0.9.0        later_1.4.5       
+[41] gtable_0.3.6       glue_1.8.0         Rcpp_1.1.1         xfun_0.55         
+[45] tidyselect_1.2.1   rstudioapi_0.18.0  knitr_1.51         farver_2.1.2      
+[49] htmltools_0.5.9    labeling_0.4.3     rmarkdown_2.30     compiler_4.5.2    
+[53] getPass_0.2-4      S7_0.2.1          </code></pre>
 </div>
 </div>
 </div>
