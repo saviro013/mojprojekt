@@ -4,26 +4,53 @@ date: "2026-01-17"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## zbiór danych
+zbiorem danych jest palmerpenguins
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+data("penguins")
+
+tabela_wynikowa <- penguins %>%
+  #usuwanie tych z brakami
+  filter(!is.na(sex), !is.na(body_mass_g)) %>%
+  group_by(species, island) %>%
+  summarise(
+    liczba_pingwinow = n(),
+    srednia_masa_g = mean(body_mass_g),
+    .groups = 'drop'
+  ) %>%
+  
+  mutate(srednia_masa_kg = srednia_masa_g / 1000)
+print(tabela_wynikowa)
+
+ggplot(penguins, aes(x = body_mass_g, fill = species)) +
+  geom_histogram(bins = 30, alpha = 0.7, color = "black") +
+  labs(
+    title = "rozkład masy ciała pingwinów",
+    x = "masa ciała",
+    y = "częstotliwość (liczba osobników)",
+    fill = "gatunek"
+  ) +
+  theme_minimal()
+
+ggplot(tabela_wynikowa, aes(x = species, y = srednia_masa_kg, fill = island)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "średnia masa ciała w zależności od gatunku i wyspy",
+    x = "gatunek pingwina",
+    y = "średnia masa",
+    fill = "wyspa"
+  ) +
+  theme_bw()
+
+ggplot(penguins, aes(x = species, y = bill_length_mm, fill = species)) +
+  geom_boxplot() +
+  labs(
+    title = "zróżnicowanie długości dzioba między gatunkami",
+    x = "gatunek",
+    y = "gługość dzioba"
+  ) +
+  theme_light()
 ```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
