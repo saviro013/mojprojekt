@@ -1,0 +1,60 @@
+---
+title: "Moje Pasje: Analiza Czasu Wolnego"
+author: "Anonimowy Student"
+format: 
+  revealjs:
+    theme: moon
+    transition: slide
+    slide-number: true
+---
+
+## Slajd 1: Kim jestem poza RStudio?
+Choć mogłoby się wydawać, że studenci żywią się tylko kodem i kawą, mamy też swoje pasje!
+
+Moje główne zainteresowania to:
+- **Prokrastynacja stosowana**
+- **Degustacja mrożonej pizzy**
+- **Badanie głębokości własnego łóżka**
+
+## Slajd 2: Pasja nr 1 - Spanie
+To pasja, w której osiągnąłem poziom ekspercki. 
+
+*Zalety:*
+- Nie generuje błędów w konsoli.
+- Nie wymaga instalowania pakietów.
+- Zawsze kończy się sukcesem (chyba że zadzwoni budzik).
+
+## Slajd 3: Analiza mojego snu (Wykres R)
+Sprawdźmy, jak wygląda moja produktywność w zależności od ilości snu.
+
+```{r}
+#| echo: false
+library(ggplot2)
+dane_sen <- data.frame(
+  godziny = c(2, 4, 6, 8, 10, 12),
+  produktywnosc = c(10, 20, 50, 90, 40, 10)
+)
+
+ggplot(dane_sen, aes(x=godziny, y=produktywnosc)) +
+  geom_line(color="orange", size=1.5) +
+  geom_point(size=4) +
+  theme_minimal() +
+  labs(title="Krzywa produktywności studenta",
+       x="Godziny snu", y="Chęć do życia (%)")
+```
+## Slajd 3: Analiza mojego snu (Wykres R)
+Sprawdźmy, jak wygląda moja produktywność w zależności od ilości snu.
+
+```{r}
+#| echo: false
+pizze <- data.frame(
+  rodzaj = c("Mrożona", "Z dowozem", "Od mamy"),
+  sztuki = c(15, 5, 2)
+)
+
+ggplot(pizze, aes(x=rodzaj, y=sztuki, fill=rodzaj)) +
+  geom_col() +
+  scale_fill_brewer(palette="Set3") +
+  theme_dark() +
+  labs(title="Miesięczne spożycie pizzy", x="Źródło", y="Ilość (sztuki)")
+```
