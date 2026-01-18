@@ -1,5 +1,5 @@
 ---
-title: "Moje Pasje: Analiza Czasu Wolnego"
+title: "Prezentacja"
 author: "Anonimowy Student"
 format: 
   revealjs:
@@ -8,53 +8,67 @@ format:
     slide-number: true
 ---
 
-## Slajd 1: Kim jestem poza RStudio?
-Choć mogłoby się wydawać, że studenci żywią się tylko kodem i kawą, mamy też swoje pasje!
+## jestem saviro013
+![](https://i.pinimg.com/736x/cb/3e/01/cb3e014d6122af3b43933bb571859ae7.jpg)
 
-Moje główne zainteresowania to:
-- **Prokrastynacja stosowana**
-- **Degustacja mrożonej pizzy**
-- **Badanie głębokości własnego łóżka**
+## Zainteresowania
+* **Granie w gry**
+* **Rysowanie**
+* **Spanie**
+* **D&D**
 
-## Slajd 2: Pasja nr 1 - Spanie
-To pasja, w której osiągnąłem poziom ekspercki. 
+## Ulubione gry
 
-*Zalety:*
-- Nie generuje błędów w konsoli.
-- Nie wymaga instalowania pakietów.
-- Zawsze kończy się sukcesem (chyba że zadzwoni budzik).
+1. Stardew Valley
 
-## Slajd 3: Analiza mojego snu (Wykres R)
-Sprawdźmy, jak wygląda moja produktywność w zależności od ilości snu.
+![](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/capsule_616x353.jpg?t=1754692865)
 
-```{r}
-#| echo: false
+## Ulubione gry
+
+2. Where Winds Meet
+
+![](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3564740/6d94b048393d5358690a04a7db99f2c9739c703c/header.jpg?t=1768270140)
+
+## Ulubione gry
+
+3. Slime Rancher 2
+
+![](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1657630/ss_4009448a95aef4e1b0afb03aec0f37abf83f2d22.1920x1080.jpg?t=1765374630)
+
+## Czemu ta prezentacja istnieje?
+
+Prezentacja zrobiona została jako część projektu.
+
+## Ulubione zwierzęta
+
+1. Koty
+
+![](https://www.petplan.co.uk/content/dam/onemarketing/petplan/petplancouk/pet-advice/cat-care-and-advice/cat-advice/Cat_OCT_article_web_are%20black%20cats%20lucky.jpg.thumb.1280.1280.png?ck=1761734173)
+
+## Ulubione zwierzęta
+
+2. Króliki
+
+![](https://i.pinimg.com/736x/8a/5c/bb/8a5cbb5bac87a7101e24f4fc6194588c.jpg)
+
+## PRZYKŁADOWY WYKRES
+
+
+```{R}
+
 library(ggplot2)
-dane_sen <- data.frame(
-  godziny = c(2, 4, 6, 8, 10, 12),
-  produktywnosc = c(10, 20, 50, 90, 40, 10)
-)
 
-ggplot(dane_sen, aes(x=godziny, y=produktywnosc)) +
-  geom_line(color="orange", size=1.5) +
-  geom_point(size=4) +
-  theme_minimal() +
-  labs(title="Krzywa produktywności studenta",
-       x="Godziny snu", y="Chęć do życia (%)")
-```
-## Slajd 3: Analiza mojego snu (Wykres R)
-Sprawdźmy, jak wygląda moja produktywność w zależności od ilości snu.
+# Korzystamy z wbudowanego datasetu 'msleep'
+ggplot(msleep, aes(x = bodywt, y = sleep_total)) +
+  geom_point(aes(color = vore), size = 3, alpha = 0.7) +
+  scale_x_log10() + # Skala logarytmiczna, bo ssaki mają bardzo różne masy
+  labs(
+    title = "Masa ciała a czas snu ssaków",
+    subtitle = "Dane obejmują różne grupy żywieniowe (w tym roślinożerców jak króliki)",
+    x = "Masa ciała (log10 kg)",
+    y = "Całkowity czas snu (h)",
+    color = "Dieta"
+  ) +
+  theme_minimal()
 
-```{r}
-#| echo: false
-pizze <- data.frame(
-  rodzaj = c("Mrożona", "Z dowozem", "Od mamy"),
-  sztuki = c(15, 5, 2)
-)
-
-ggplot(pizze, aes(x=rodzaj, y=sztuki, fill=rodzaj)) +
-  geom_col() +
-  scale_fill_brewer(palette="Set3") +
-  theme_dark() +
-  labs(title="Miesięczne spożycie pizzy", x="Źródło", y="Ilość (sztuki)")
 ```

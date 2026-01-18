@@ -292,7 +292,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -303,8 +303,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -313,13 +313,13 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2026-01-17
+<strong>Last updated:</strong> 2026-01-18
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>mojprojekt/</code> <span
@@ -342,33 +342,36 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsaviro013mojprojekttree68045648fbf20ad40037e04941daf90b897bb437targetblank6804564a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsaviro013mojprojekttreed0a2d626eb28e6301e2777b4976ad8429f8e41d1targetblankd0a2d62a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/saviro013/mojprojekt/tree/68045648fbf20ad40037e04941daf90b897bb437" target="_blank">6804564</a>
+<a href="https://github.com/saviro013/mojprojekt/tree/d0a2d626eb28e6301e2777b4976ad8429f8e41d1" target="_blank">d0a2d62</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomsaviro013mojprojekttree68045648fbf20ad40037e04941daf90b897bb437targetblank6804564a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomsaviro013mojprojekttreed0a2d626eb28e6301e2777b4976ad8429f8e41d1targetblankd0a2d62a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -378,7 +381,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/saviro013/mojprojekt/tree/68045648fbf20ad40037e04941daf90b897bb437" target="_blank">6804564</a>.
+<a href="https://github.com/saviro013/mojprojekt/tree/d0a2d626eb28e6301e2777b4976ad8429f8e41d1" target="_blank">d0a2d62</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -396,10 +399,8 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  prezentacja.html
-    Untracked:  prezentacja.qmd
-    Untracked:  prezentacja_files/
+Unstaged changes:
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -443,6 +444,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/saviro013/mojprojekt/bb5ab2cccb5b1c3691bdfeee8904d5d4d069709d/docs/index.html" target="_blank">bb5ab2c</a>
+</td>
+<td>
+saviro013
+</td>
+<td>
+2026-01-17
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -501,7 +519,30 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Tutaj jest zawartość strony głównej</p>
+<div id="projekt" class="section level1">
+<h1>PROJEKT</h1>
+<div id="o-autorze" class="section level3">
+<h3>O autorze</h3>
+<p>Jestem <strong>saviro013</strong><br />
+Studiuję na kierunku <code>Informatyka i Inżynieria Danych</code> na
+Uniwersytecie Przyrodniczym w Poznaniu.</p>
+<p><em>Ta strona została przygotowana jako projekt
+zaliczeniowy.</em></p>
+<hr />
+</div>
+<div id="moja-uczelnia" class="section level3">
+<h3>Moja Uczelnia</h3>
+<p>zdjęcie głównego budynku mojej uczelni (Collegium Maximum):</p>
+<p><img
+src="https://up.poznan.pl/sites/default/files/styles/upp_tablet_1000/public/2026-01/COLLEGIUM%20MAXIMUM.png?itok=bUom8Q5y" /></p>
+<hr />
+</div>
+<div id="o-projekcie" class="section level3">
+<h3>O projekcie</h3>
+<p>Ta witryna została w całości wygenerowana przy użyciu pakietu
+<strong>workflowr</strong>.</p>
+</div>
+</div>
 </div>
 </div>
 </div>

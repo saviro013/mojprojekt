@@ -8,4 +8,22 @@ editor_options:
   chunk_output_type: console
 ---
 
-Tutaj jest zawartość strony głównej
+# PROJEKT
+
+### O autorze
+Jestem **saviro013**  
+Studiuję na kierunku `Informatyka i Inżynieria Danych` na Uniwersytecie Przyrodniczym w Poznaniu. 
+
+*Ta strona została przygotowana jako projekt zaliczeniowy.*
+
+---
+
+### Moja Uczelnia
+zdjęcie głównego budynku mojej uczelni (Collegium Maximum):
+
+![](https://up.poznan.pl/sites/default/files/styles/upp_tablet_1000/public/2026-01/COLLEGIUM%20MAXIMUM.png?itok=bUom8Q5y)
+
+---
+
+### O projekcie
+Ta witryna została w całości wygenerowana przy użyciu pakietu **workflowr**.

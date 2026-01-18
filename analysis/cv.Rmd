@@ -1,30 +1,33 @@
 ---
-title: "projekt"
+title: "CV"
 output: html_document
 date: "2026-01-17"
 ---
 
-# john doe
+# ANONIMOWY STUDENT
 
-**E-mail:** doe@przykladowyemail.com  
+**E-mail:** john.doe@email.com  
 **Adres:** ul. adresowa 67, 00-000 miasto  
 **Telefon:** (+48) 000 000 001
 
 ---
 
-# PROFIL ZAWODOWY
-Wybitny specjalista w zakresie optymalizacji czasu wolnego i unikania kontaktu wzrokowego z prowadzącym. Moim największym osiągnięciem jest napisanie tego projektu bez użycia ani jednej prawdziwej informacji o sobie. Posiadam czarny pas w googlowaniu błędów w R, których nikt wcześniej nie widział.
+### PROFIL ZAWODOWY
+Wybitny specjalista w zakresie optymalizacji czasu wolnego i unikania kontaktu wzrokowego z prowadzącym. Moim największym osiągnięciem jest napisanie tego projektu. Posiadam czarny pas w googlowaniu błędów w R, których nikt wcześniej nie widział.
 
 ---
 
-# WYKSZTAŁCENIE
-* **Uniwersytet Wielkiej Improwizacji** (2023 – obecnie)
+### WYKSZTAŁCENIE
+* **Uniwersytet Przyrodniczy w Poznaniu**
+    * Kierunek: Informatyka i Inżynieria Danych
+
+* **Szkoła Wielkiej Improwizacji**
     * Kierunek: Zaawansowane Teoretyzowanie o Niczym
     * Specjalność: Analiza danych z sufitu
 
 ---
 
-# UMIEJĘTNOŚCI
+### UMIEJĘTNOŚCI
 | Obszar | Stopień wtajemniczenia |
 |:---|:---|
 | **Programowanie w R** | Wiem, co to jest błąd i jak go zamknąć |
@@ -34,7 +37,7 @@ Wybitny specjalista w zakresie optymalizacji czasu wolnego i unikania kontaktu w
 
 ---
 
-# DOŚWIADCZENIE / PROJEKTY
+### DOŚWIADCZENIE / PROJEKTY
 1. **Projekt 'Gdzie jest błąd?'**
     * Spędzenie 4 godzin na szukaniu brakującego nawiasu w kodzie.
     * Sukces: Błąd nie został znaleziony, ale kod zaczął działać sam z siebie.
@@ -44,13 +47,13 @@ Wybitny specjalista w zakresie optymalizacji czasu wolnego i unikania kontaktu w
 
 ---
 
-# CERTYFIKATY I OSIĄGNIĘCIA
+### CERTYFIKATY I OSIĄGNIĘCIA
 * Certyfikat ukończenia 15 minutowego tutoriala na YouTube (zrozumiane 10%).
 * Order Złotej Klawiatury za najszybsze wciskanie Ctrl+C i Ctrl+V ze Stack Overflow.
 
 ---
 
-# ZAINTERESOWANIA
+### ZAINTERESOWANIA
 * **Analiza danych:** Głównie sprawdzanie, ile dni zostało do wakacji.
 * **Sport:** Szybkie bieganie na autobus, który właśnie odjeżdża.
 * **Kulinaria:** Profesjonalna degustacja mrożonej pizzy podczas renderowania projektów.
